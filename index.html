@@ -18,7 +18,7 @@
     $(document).ready(function() {
         console.log('Ready!')
         $('#fullpage').fullpage({
-            anchors: ['first', 'second', 'third', 'fourth'],
+            anchors: ['first', 'second', 'third', 'fourth', 'fifth'],
             afterLoad: function(anchorLink, index) {
                 $('#header-text-' + index).addClass('header-text-active');
             },
@@ -30,7 +30,8 @@
                 $('.header-text').removeClass('header-text-active');
                 $('#header-text-' + nextIndex).addClass('header-text-active');
 
-                if (nextIndex == 4) {
+                // Phone and screen
+                if (nextIndex == 4 || nextIndex == 5) {
                     $('#phone').fadeOut();
                     $('#screen').fadeOut();
                 }
@@ -40,13 +41,14 @@
                     $('#screen').fadeOut();
                 }
 
-                if (nextIndex != 4) {
+                if (nextIndex != 4 && nextIndex != 5) {
                     $('#screen').fadeOut(400, function() {
                             $('#screen').attr('src', 'images/screen_' + nextIndex + '.png');
                         })
                         .fadeIn();
                 }
 
+                // Logo
                 if (nextIndex == 4) {
                     $('#logo').fadeOut(400, function() {
                         $('#logo').attr('src', 'images/logo_2.png').fadeIn();
@@ -285,6 +287,9 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="section" id="section4" style="background-color: #F1EBE7;">
+            
         </div>
     </div>
     <script>
