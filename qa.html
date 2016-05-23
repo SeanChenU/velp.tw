@@ -2,7 +2,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Velp - 即時的獸醫到府服務</title>
+    <title>Velp - 即時的獸醫到府服務 Q&A</title>
     <meta property="og:site_name" content="Velp">
     <meta property="og:title" content="即時的獸醫到府服務">
     <meta property="og:description" content="Velp 提供最專業的獸醫到府服務及線上看診。">
@@ -11,64 +11,7 @@
     <meta property="og:image:width" content="516">
     <meta property="og:image:height" content="401">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script src="js/jquery.fullPage.js"></script>
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <script type="text/javascript">
-    $(document).ready(function() {
-        console.log('Ready!')
-        $('#fullpage').fullpage({
-            anchors: ['first', 'second', 'third', 'fourth', 'fifth'],
-            afterLoad: function(anchorLink, index) {
-                $('#header-text-' + index).addClass('header-text-active');
-            },
-            onLeave: function(index, nextIndex, direction) {
-                console.log(nextIndex);
-
-                // $('.header-text').css('text-decoration', 'none');
-                // $('#header-text-' + nextIndex).css('text-decoration', 'underline');
-                $('.header-text').removeClass('header-text-active');
-                $('#header-text-' + nextIndex).addClass('header-text-active');
-
-                // Phone and screen
-                if (nextIndex == 4 || nextIndex == 5) {
-                    $('#phone').fadeOut();
-                    $('#screen').fadeOut();
-                }
-
-                if (index == 4 && nextIndex == 3) {
-                    $('#phone').fadeIn();
-                    $('#screen').fadeOut();
-                }
-
-                if (nextIndex != 4 && nextIndex != 5) {
-                    $('#screen').fadeOut(400, function() {
-                            $('#screen').attr('src', 'images/screen_' + nextIndex + '.png');
-                        })
-                        .fadeIn();
-                }
-
-                // Logo
-                if (nextIndex == 4) {
-                    $('#logo').fadeOut(400, function() {
-                        $('#logo').attr('src', 'images/logo_2.png').fadeIn();
-                    })
-
-                    $('.header-text').fadeOut();
-                } else if (index == 4 && nextIndex == 3) {
-                    $('#logo').fadeOut(400, function() {
-                        $('#logo').attr('src', 'images/logo.png').fadeIn();
-                    })
-                    $('.header-text').fadeIn();
-                }
-
-            }
-        })
-
-        // $.fn.fullpage.setAutoScrolling(false);
-
-    });
-    </script>
     <script>
     (function(i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
@@ -231,86 +174,17 @@
     </style>
 </head>
 
-<body>
+<body style="background-color: #F1EBE7;">
     <div class="center" id="header">
-        <div class="header-container" style="text-align: center; width: 100%;">
+        <div class="header-container" style="text-align: center; width: 100%; background-color: #F1EBE7;">
             <div style="position: relative; text-align: center;">
-                <a href="#first" id="header-text-1" class="header-text" style="margin-right: 100px;">APP</a>
-                <a href="#second" id="header-text-2" class="header-text" style="margin-right: 100px;">醫師</a>
-                <img id="logo" class="logo" src="images/logo.png" alt="">
-                <a href="#third" id="header-text-3" class="header-text" style="margin-left: 100px;">特色</a>
-                <a href="#fourth" id="header-text-4" class="header-text" style="margin-left: 100px;">聯絡</a>
+                <img id="logo" class="logo" src="images/logo_2.png" alt="">
             </div>
-        </div>
-        <div class="phone-container">
-            <img id="phone" src="images/iphone_frame.png" alt="">
-            <img id="screen" src="images/screen_1.png" alt="">
         </div>
     </div>
-    <div id='fullpage'>
-        <div class="section have_bg_image" id="section0">
-            <div class="text-container">
-                <div class="text-title">
-                    半夜找不到獸醫? Velp 提供您最即時的專業獸醫服務
-                </div>
-                <div class="text-detail">
-                    執業獸醫24HR視訊問診，並可在線上立即尋找最近的獸醫到府提供緊急醫療協助，讓您的寵物即時接受專業醫療，同時減輕您舟車勞頓的時間與金錢！
-                </div>
-            </div>
-        </div>
-        <div class="section have_bg_image" id="section1">
-            <div class="text-container-2">
-                <div class="text-title">
-                    無論何時何處，我們為您服務
-                </div>
-                <div class="text-detail">
-                    Velp 的獸醫來自各地，皆具有合格獸醫師執照及豐富的臨床經驗，在凌晨時段也有醫師排班，讓您的寵物能夠被時時守護
-                </div>
-            </div>
-        </div>
-        <div class="section have_bg_image" id="section2">
-            <div class="text-container-3">
-                <div class="text-title">
-                    即時諮詢，雲端病歷，持續追蹤
-                </div>
-                <div class="text-detail">
-                    即時視訊諮詢，讓獸醫能快速掌握寵物狀況，提供您最專業的協助。
-                    <br>同時建立雲端病歷，讓看診資訊更透明
-                    <br>在獸醫到府服務後，您可持續在Velp平台上與獸醫互動，即時掌握病情
-                </div>
-            </div>
-        </div>
-        <!-- Section for users and doctors who are interested. -->
-        <div class="section" id="section3" style="background-color: #F1EBE7;">
-            <div style="text-align: center; margin-top: 50; position: relative; top: 40%;">
-                <div style="display: inline-block; margin-right: 100px;">
-                    <div style="display: block;">
-                        <img src="images/petowner.png" alt="" style="width: 80px;">
-                        <div class="final-text" style="margin-top: 20px;">我是寵物主人</div>
-                        <a href="http://goo.gl/forms/AWvhY0cpwi">
-                            <button class="final-button" style="" onclick="">
-                                獲取免費試用機會!</button>
-                        </a>
-                    </div>
-                </div>
-                <div style="display: inline-block; right: 0px;">
-                    <div style="display: block;">
-                        <img src="images/doctor.png" alt="" style="width: 80px;">
-                        <div class="final-text" style="margin-top: 20px;">合作醫師募集中！</div>
-                        <a href="http://goo.gl/forms/Qd8avyoKiw">
-                            <button type="button" class="final-button">我有興趣</button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div style="position: absolute; top: 395%; width: 100%;">
-                <div style="text-align: center;">
-                    <a href="">Ｑ＆Ａ 我有問題！</a>
-                </div>
-            </div>
-        </div>
-        <!-- <div class="section" id="section4" style="background-color: #F1EBE7;">
-            <div>
+    <div id=''>
+        <div class="" id="qa_section">
+            <div style="margin-top: 10%; margin-left: 10%; margin-right: 10%; margin-bottom: 5%;">
                 <b>1. 哪些情況下適合使用Velp視訊功能呢？</b>
                 <div>a. 只是想問問題，跑去獸醫院還要掛號，可能還要排隊…
                     <br>b. 症狀感覺不是很嚴重，好像該帶去又好像不太用帶去獸醫院，但還是想請獸醫師確認一下比較安心（例：一直啃腳腳啦、最近一直掉毛啦、便便有點不對勁…等），比較介於這種灰色地帶的問題
@@ -338,18 +212,8 @@
                 <b>7. 不管是白天還是深夜，有外人來家裡就是會不太放心，Velp如何確保安全性呢？</b>
                 <div>在Velp上每位獸醫師都是實名登記，也會附上獸醫師證書；配對完成後的到達過程中會有GPS定位，到府時會掃QR code確認，結束診療也會線上通知。安全問題是我們的第一要務，請大家放心。</div>
             </div>
-        </div> -->
+        </div>
     </div>
-    <script>
-    var phone_position = $('.phone-container').position();
-    console.log(phone_position);
-    $('#screen').css({
-        top: phone_position.top,
-        left: phone_position.left,
-        position: 'fixed',
-        width: '250px'
-    });
-    </script>
 </body>
 
 </html>
