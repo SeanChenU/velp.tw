@@ -178,7 +178,7 @@
     
     .phone-container {
         text-align: center;
-        width: 250px;
+        width: 25%;
         position: fixed;
         top: 20%;
         left: 15%;
@@ -342,12 +342,13 @@
     </div>
     <script>
     var phone_position = $('.phone-container').position();
+    var phone_width = $('.phone-container').css('width')
     console.log(phone_position);
     $('#screen').css({
         top: phone_position.top,
         left: phone_position.left,
         position: 'fixed',
-        width: '250px'
+        width: phone_width
     });
     </script>
 </body>
