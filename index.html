@@ -67,13 +67,34 @@
 
         // $.fn.fullpage.setAutoScrolling(false);
 
-        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            // some code..
-
-            alert('is iphone!');
-        }
+        autoSizeBackgroundImages();
 
     });
+
+    $(window).resize(function() {
+        setPhoneScreenSize();
+        autoSizeBackgroundImages();
+    });
+
+    function autoSizeBackgroundImages() {
+        if ( $(window).width() < $(window).height() ) {
+            sizeBackgroundImagesToFitHeight();
+        } else {
+            sizeBackgroundImagesToFitWidth();
+        }
+    }
+
+    function sizeBackgroundImagesToFitHeight() {
+        $('#section0').css('background-size', 'auto 100%');
+        $('#section1').css('background-size', 'auto 100%');
+        $('#section2').css('background-size', 'auto 100%');
+    }
+
+    function sizeBackgroundImagesToFitWidth() {
+        $('#section0').css('background-size', '100% auto');
+        $('#section1').css('background-size', '100% auto');
+        $('#section2').css('background-size', '100% auto');
+    }
     </script>
     <script>
     (function(i, s, o, g, r, a, m) {
@@ -347,17 +368,19 @@
         </div> -->
     </div>
     <script>
-    var phone_position = $('.phone-container').position();
-    // var phone_pos_top = $('.phone-container').css('top');
-    // var phone_pos_left = $('.phone-container').css('left');
-    var phone_width = $('.phone-container').css('width')
-    console.log(phone_position);
-    $('#screen').css({
-        top: phone_position.top,
-        left: phone_position.left,
-        position: 'fixed',
-        width: phone_width
-    });
+    function setPhoneScreenSize() {
+        var phone_position = $('.phone-container').position();
+        var phone_width = $('.phone-container').css('width')
+        console.log(phone_position);
+        $('#screen').css({
+            top: phone_position.top,
+            left: phone_position.left,
+            position: 'fixed',
+            width: phone_width
+        });
+    }
+
+    setPhoneScreenSize();
     </script>
 </body>
 
