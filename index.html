@@ -71,7 +71,7 @@
             // some code..
             autoSizeBackgroundImages();
             adjustTextSize();
-
+            enlargeQABox();
         }
 
     });
@@ -114,6 +114,13 @@
 
     function isPortrait() {
         return $(window).width() < $(window).height()
+    }
+
+    function enlargeQABox() {
+        $('.vertical-box').css('width', '250');
+        $('.vertical-box').css('height', '70');
+        $('.vertical-box').css('left', '-90');
+        $('.vertical-box').css('font-size', '30');
     }
     </script>
     <script>
@@ -281,13 +288,13 @@
         left: -75; /* ((width / 2) - (height / 2)) * (-1) */
         top: 50%;
         width: 180;
+        height: 30;
         z-index: 100;
         font-size: 20;
         background-color: #7695B6;
         opacity: 0.8;
         margin-bottom: 0;
         transform: rotate(90deg);
-        height: 30;
         text-align: center;
         border-top-left-radius: 2em;
         border-top-right-radius: 2em;
@@ -376,11 +383,6 @@
                     </div>
                 </div>
             </div>
-            <!-- <div style="position: absolute; top: 395%; width: 100%;">
-                <div style="text-align: center; font-size: 25px;">
-                    <a id="qa_link" style="color: #7695B6; text-decoration: underline;" href="qa.html">Ｑ＆Ａ 我有問題！</a>
-                </div>
-            </div> -->
         </div>
     </div>
     <script>
