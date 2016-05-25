@@ -275,10 +275,34 @@
         font-weight: lighter;
         -webkit-text-stroke-width: 0.1px;
     }
+    
+    .vertical-box {
+        position: fixed;
+        left: -75; /* ((width / 2) - (height / 2)) * (-1) */
+        top: 50%;
+        width: 180;
+        z-index: 100;
+        font-size: 20;
+        background-color: #7695B6;
+        opacity: 0.8;
+        margin-bottom: 0;
+        transform: rotate(90deg);
+        height: 30;
+        text-align: center;
+        border-top-left-radius: 2em;
+        border-top-right-radius: 2em;
+    }
+
+    .vertical-text {
+        color: white;
+    }
     </style>
 </head>
 
 <body>
+    <div class="vertical-box">
+        <a class="vertical-text" href="qa.html">Ｑ＆Ａ我有問題</a>
+    </div>
     <div class="center" id="header">
         <div class="header-container" style="text-align: center; width: 100%;">
             <div style="position: relative; text-align: center;">
@@ -352,42 +376,12 @@
                     </div>
                 </div>
             </div>
-            <div style="position: absolute; top: 395%; width: 100%;">
+            <!-- <div style="position: absolute; top: 395%; width: 100%;">
                 <div style="text-align: center; font-size: 25px;">
                     <a id="qa_link" style="color: #7695B6; text-decoration: underline;" href="qa.html">Ｑ＆Ａ 我有問題！</a>
                 </div>
-            </div>
+            </div> -->
         </div>
-        <!-- <div class="section" id="section4" style="background-color: #F1EBE7;">
-            <div>
-                <b>1. 哪些情況下適合使用Velp視訊功能呢？</b>
-                <div>a. 只是想問問題，跑去獸醫院還要掛號，可能還要排隊…
-                    <br>b. 症狀感覺不是很嚴重，好像該帶去又好像不太用帶去獸醫院，但還是想請獸醫師確認一下比較安心（例：一直啃腳腳啦、最近一直掉毛啦、便便有點不對勁…等），比較介於這種灰色地帶的問題
-                    <br>c. 夜已深，毛孩子情況不太對…但24小時動物醫院離我家有段距離，深夜光是掛號費就很貴；想先找位獸醫師評估這種情況究竟有沒有必要立即送診</div>
-                <br>
-                <b>2. Velp視訊可以作到什麼程度呢？可以直接開立處方不用再帶去獸醫院看診嗎？</b>
-                <div>針對疾病的部份，Velp利用科技的進步突破了一些時空的障礙，使獸醫師能以自身經驗藉由視診、問診來做初步診斷；但在聞診、觸診、一部份的聽診…等方面是無法做到的。所以在定位上，請大家把Velp視訊當成一種快速檢傷分類的工具來使用，協助飼主判斷毛孩子的狀況是否緊急，以免延誤就醫；對於一些小問題，則能省去奔波等待的時間並解除對毛孩子的擔心。
-                    <br>針對詢問寵物問題的部份，Velp視訊則能當作咨詢使用。與線上文字咨詢比起來，Velp更即時、能夠問的更詳細、還能讓獸醫師看看毛孩子或對家中環境作出建議，Velp更會載明獸醫師詳細資料，對飼主來說更有保障</div>
-                <br>
-                <b>3. 哪些情況下適合使用Velp緊急出診功能呢？</b>
-                <div>a. 毛孩子體型比較大，但家裡沒汽車，願意載牠的計程車又少
-                    <br>b. 毛孩子半夜出問題，平時去的獸醫院已關門，但24小時獸醫院太遠，想看看是不是能先穩定一下情況隔天再送去習慣的獸醫院
-                    <br>c. 臨時有狀況沒辦法出門，需要獸醫師到府服務</div>
-                <br>
-                <b>4.  Velp出診服務可以作到什麼程度呢？</b>
-                <div>我們的出診箱中包括了一般獸醫院會使用到的輸液、相關耗材、器具及大部份藥物，再配合上獸醫師本身的經驗及處置，能夠在一定程度下穩定毛孩子的病情（例：發燒、吐、拉、脫水、扭傷止痛、包紮止血…等），但畢竟我們無法將所有設備都帶齊，所以請將出診視為「緊急處置」，獸醫師會與您解釋情況並討論下一步該怎麼作，如穩定後獸醫師判斷有需要後送我們也有合作的24小時獸醫院。</div>
-                <br>
-                <b>5.  是否有哪些情況是不適合使用Velp出診功能的呢？</b>
-                <div>a. 因出診箱無冷藏設備，故施打疫苗部份目前Velp無法提供此服務
-                    <br> b. 心肺功能問題、大量出血、呼吸急促、休克昏迷…等嚴重情況，請直接衝急診</div>
-                <br>
-                <b>6. 我能夠相信Velp裡獸醫師的專業度嗎？</b>
-                <div>與我們簽約合作的都是能夠獨立看診且有2年以上臨床經驗的獸醫師，且經過Velp設計的實戰情境題目與面談來作篩選考核；每次看診後也會要求客戶評分，藉由榮譽制度來維持獸醫師看診的品質。</div>
-                <br>
-                <b>7. 不管是白天還是深夜，有外人來家裡就是會不太放心，Velp如何確保安全性呢？</b>
-                <div>在Velp上每位獸醫師都是實名登記，也會附上獸醫師證書；配對完成後的到達過程中會有GPS定位，到府時會掃QR code確認，結束診療也會線上通知。安全問題是我們的第一要務，請大家放心。</div>
-            </div>
-        </div> -->
     </div>
     <script>
     function setPhoneScreenSize() {
